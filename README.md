@@ -81,7 +81,11 @@ pip install -r requirements.txt
 ```
 
 > **重要提示**：
-> - 当前使用 **PyTorch 2.3.1**（CPU 版本）和 **NumPy 1.x**（<2.0），以确保在 Windows 上的稳定性
+> - 当前使用 **NumPy 1.x**（<2.0），以确保在 Windows 上的稳定性
+> - **PyTorch**：默认会安装 CPU 版本，如需 GPU 支持，可单独安装 GPU 版本：
+>   ```bash
+>   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+>   ```
 > - 如果安装 PyTorch Geometric 有困难，可以先忽略；GNN 会被**自动降级为基线模型**，不影响整体运行
 
 #### 4. 安装 Node.js 依赖
